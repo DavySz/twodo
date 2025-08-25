@@ -10,14 +10,12 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.studies.twodo.domain.Todo
 import com.studies.twodo.domain.fakeTodoFinished
 import com.studies.twodo.ui.theme.TwodoTheme
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.ui.unit.dp
 import com.studies.twodo.domain.fakeTodoUnfinished
@@ -25,7 +23,7 @@ import com.studies.twodo.ui.components.TodoItem
 
 @Composable
 fun ListScreen() {
-    
+    ListContent(todos = emptyList())
 }
 
 @Composable
