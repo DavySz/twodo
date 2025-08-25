@@ -21,7 +21,7 @@ import com.studies.twodo.ui.theme.TwodoTheme
 
 @Composable
 fun AddEditScreen() {
-    
+    AddEditScreenContent()
 }
 
 @Composable
