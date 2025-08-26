@@ -3,7 +3,7 @@ import com.studies.twodo.domain.Todo
 import kotlinx.coroutines.flow.Flow
 
 interface TodoRepository {
-    suspend fun insert(title: String, description: String?)
+    suspend fun insert(title: String, description: String?, id: Long? = null)
 
     suspend fun updateIsFinished(id: Long, isFinished: Boolean)
 

@@ -6,7 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.studies.twodo.ui.features.addedit.AddEditScreen
-import com.studies.twodo.ui.features.ListScreen
+import com.studies.twodo.ui.features.list.ListScreen
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -36,7 +36,8 @@ fun TodoNavHost() {
             AddEditScreen(
                 goBack = {
                     navController.popBackStack()
-                }
+                },
+                id = stack.id
             )
         }
     }

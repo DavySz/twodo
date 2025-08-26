@@ -30,14 +30,18 @@ import com.studies.twodo.ui.theme.TwodoTheme
 
 @Composable
 fun AddEditScreen(
-    goBack: () -> Unit
+    goBack: () -> Unit,
+    id: Long?
 ) {
     val context  = LocalContext.current.applicationContext
     val database = TodoDatabaseProvider.provide(context).todoDAO
     val repository = TodoRepositoryImpl(database)
 
     val viewModel = viewModel<AddEditViewModel> {
-        AddEditViewModel(repository)
+        AddEditViewModel(
+            repository = repository,
+            id = id
+        )
     }
 
     val snackbarHostState = remember {
